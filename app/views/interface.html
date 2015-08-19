@@ -1,0 +1,113 @@
+<div style="margin-top: 100px;"></div>
+
+<h1>Interface</h1>
+
+<hr/>
+
+<div class="row featurette" style="margin-top: 40px;">
+  <div class="col-md-4">
+    <img src="img/interface-1.png" alt="image" class="img-rounded" />
+  </div>
+  <div class="col-md-7">
+    <h2>A tela de login</h2>
+    <p>
+      A interface padrão do {{encontro}} é o Unity, representado pelo ícone do Ubuntu, mas você pode alterar para GNOME 3. Basta clicar no ícone
+      <img src="img/ubuntu-unity.png" alt="" />e você verá a tela abaixo.
+    </p>
+    <p>
+      É possível logar-se como Convidado. Esse usuário especial não tem senha, ele serve apenas para usuários que desejam realizar tarefas simples como:
+    </p>
+    <ul>
+      <li>Navegar na internet</li>
+      <li>Editar um texto</li>
+      <li>Ver um vídeo</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row" style="margin-top: 40px;">
+  <div class="col-md-4">
+    <img src="img/interface-2.png" alt="image" class="img-rounded" />
+  </div>
+  <div class="col-md-7">
+    <h2>Escolha da interface</h2>
+    <p>
+      Uma vez que você selecione uma interface, ela será padrão. Isso quer dizer que você não precisa mudar sempre, apenas uma vez.
+    </p>
+    <p>
+      Se você deseja uma interface com efeitos escolha entre:
+    </p>
+    <ul>
+      <li>Ubuntu</li>
+      <li>GNOME</li>
+    </ul>
+    <p>
+      Mas se você prefere uma interface rápida opte por:
+    </p>
+    <ul>
+      <li>Ubuntu 2D</li>
+      <li>GNOME Classic (No Effects)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TODO: mostrar screenshot do Unity e GNOME3 -->
+<h2 style="margin-top: 40px;">Interfaces em Ação</h2>
+<hr/>
+<div class="row">
+    <div class="col-md-9 col-md-offset-1">
+        <div style="height: 600px">
+            <carousel interval="myInterval" disable-animation="true">
+                <slide ng-repeat="slide in slides" active="slide.active">
+                    <img ng-src="{{slide.image}}" style="margin:auto;width: 600px;">
+                    <div class="carousel-caption">
+                        <h3>{{slide.text}}</h3>
+                    </div>
+                </slide>
+            </carousel>
+        </div>
+    </div>
+</div>
+
+<h2 style="margin-top: 40px;">Mude a aparência do {{encontro}}</h2>
+<hr/>
+<div class="row">
+  <div class="col-md-6">
+    <img src="img/ubuntu-tweak.png" alt="ubuntu-tweak" style="width: 550px" />
+  </div>
+  <div class="col-md-5">
+    Usando o Ubuntu Tweak você poderá personalizar seu {{encontro}} ainda mais.
+    <p>
+      Clique em Tema e escolha um tema de sua preferência. Além do tema você pode:
+    </p>
+    <ul>
+      <li>Mudar o tema dos ícones.</li>
+      <li>Mudar o tema do cursor.</li>
+      <li>Instalar um novo tema. Outros temas podem ser encontrados em:
+        <a href="http://gnome-look.org/index.php?xsortmode=down&page=0&xcontentmode=167" target="blank">Gnome-Look.org</a>
+      </li>
+    </ul>
+    <p>
+      Modifique também opções de inicialização em <strong>Configuração de Login</strong>.
+    </p>
+    <div class="alert alert-warning" role="alert">
+      <strong>Aviso!</strong> Você tem que ser administrador para modificar algumas coisas. Verifique no canto superior direito caso apareça o botão <strong>Desbloquear</strong>.
+    </div>
+  </div>
+</div>
+
+<h2 style="margin-top: 40px;">GNOME 3</h2>
+<hr/>
+<div class="row">
+  <div class="col-md-6">
+    <img src="img/gnome-tweak-tool.png" alt="gnome-tweak-tool" />
+  </div>
+  <div class="col-md-5">
+    Se você optou pelo GNOME 3 é possível personalizar usando o
+    <strong>Gnome Tweak Tool</strong>.
+    <p>
+      O GNOME 3 vem de uma forma bem simplificada, mas existe um site chamado <a href="https://extensions.gnome.org/" target="blank">extensions.gnome.org</a>
+      onde você pode encontrar várias extensões.
+    </p>
+  </div>
+</div>
