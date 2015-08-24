@@ -12,6 +12,6 @@ angular.module('comsolidReleaseNotesApp')
         };
         addSlide('img/GNOME3.png', 'GNOME 3');
         addSlide('img/Unity.png', 'Unity');
+        addSlide('img/numix-icon-set.png', 'Coleção de ícones Numix');
         addSlide('img/faenza-icon-set.png', 'Coleção de ícones Faenza');
-        addSlide('img/nitrux-icon-set.jpg', 'Coleção de ícones Nitrux');
     }]);
