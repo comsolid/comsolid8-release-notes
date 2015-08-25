@@ -26,14 +26,14 @@ module.exports = function(grunt) {
   var cmd_svg2img = 'inkscape --export-png=%s -w, --export-width=%s --export-height=%s --file=%s;';
 
   function export2img(params, width, height) {
-      var cmd = '';
-      var len = params.length;
-      for (var i = 0; i < len; i++) {
-          var export_filename = params[i] + '.png';
-          var filename = params[i] + '.svg';
-          cmd += util.format(cmd_svg2img, export_filename, width, height, filename);
-      }
-      return cmd;
+    var cmd = '';
+    var len = params.length;
+    for (var i = 0; i < len; i++) {
+      var export_filename = params[i] + '.png';
+      var filename = params[i] + '.svg';
+      cmd += util.format(cmd_svg2img, export_filename, width, height, filename);
+    }
+    return cmd;
   }
 
   // Define the configuration for all the tasks
@@ -374,68 +374,75 @@ module.exports = function(grunt) {
     },
 
     exec: {
-        svg2size64: {
-            command: function () {
-                var params = [
-                    'applications-display',
-                    'applications-games',
-                    'applications-multimedia',
-                    'applications-office',
-                    'applications-other',
-                ];
-                return export2img(params, '64', '64');
-            },
-            cwd: 'img-sources'
+      svg2size64: {
+        command: function() {
+          var params = [
+            'applications-display',
+            'applications-games',
+            'applications-multimedia',
+            'applications-office',
+            'applications-other',
+          ];
+          return export2img(params, '64', '64');
         },
-        svg2size128: {
-            command: function () {
-                var params = [
-                    'arista',
-                    'brasero',
-                    'gaupol',
-                    'imagination',
-                    'libreoffice-base',
-                    'libreoffice-calc',
-                    'libreoffice-draw',
-                    'libreoffice-impress',
-                    'libreoffice-main',
-                    'libreoffice-math',
-                    'libreoffice-writer',
-                    'lmms-logo',
-                    'openshot',
-                    'rhythmbox',
-                    'soundconverter',
-                    'soundjuicer',
-                    'tuxguitar',
-                    'vlc'
-                ];
-                return export2img(params, '128', '128');
-            },
-            cwd: 'img-sources'
+        cwd: 'img-sources'
+      },
+      svg2size128: {
+        command: function() {
+          var params = [
+            'arista',
+            'brasero',
+            'gaupol',
+            'imagination',
+            'libreoffice-base',
+            'libreoffice-calc',
+            'libreoffice-draw',
+            'libreoffice-impress',
+            'libreoffice-main',
+            'libreoffice-math',
+            'libreoffice-writer',
+            'lmms-logo',
+            'openshot',
+            'rhythmbox',
+            'soundconverter',
+            'soundjuicer',
+            'tuxguitar',
+            'vlc'
+          ];
+          return export2img(params, '128', '128');
         },
-        svg2size140: {
-            command: function () {
-                var params = [
-                    'blender',
-                    'chromium',
-                    'firefox',
-                    'frogatto',
-                    'gimp',
-                    'inkscape',
-                    'openarena',
-                    'pcsx2',
-                    'pcsx-icon',
-                    'playonlinux',
-                    'supertuxkart',
-                    'supertux',
-                    'warmux',
-                    'zsnes'
-                ];
-                return export2img(params, '140', '140');
-            },
-            cwd: 'img-sources'
-        }
-    }
+        cwd: 'img-sources'
+      },
+      svg2size140: {
+        command: function() {
+          var params = [
+            'blender',
+            'chromium',
+            'firefox',
+            'frogatto',
+            'gimp',
+            'inkscape',
+            'openarena',
+            'pcsx2',
+            'pcsx-icon',
+            'playonlinux',
+            'supertuxkart',
+            'supertux',
+            'warmux',
+            'zsnes'
+          ];
+          return export2img(params, '140', '140');
+        },
+        cwd: 'img-sources'
+      }
+  },
+
+  'gh-pages': {
+    options: {
+      base: 'dist'
+    },
+    src: ['**']
+  }
 
   });
 
@@ -489,6 +496,11 @@ module.exports = function(grunt) {
     'newer:jshint',
     'test',
     'build'
+  ]);
+
+  grunt.registerTask('deploy', [
+      'build',
+      'gh-pages'
   ]);
 
   grunt.loadNpmTasks('grunt-inline-angular-templates');

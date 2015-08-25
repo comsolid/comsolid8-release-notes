@@ -25,6 +25,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-exec": "^0.4.6",
     "grunt-filerev": "^0.2.1",
+    "grunt-gh-pages": "^0.10.0",
     "grunt-google-cdn": "^0.4.0",
     "grunt-inline-angular-templates": "^0.1.5",
     "grunt-karma": "^0.9.0",
